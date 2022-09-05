@@ -1,27 +1,33 @@
-package model;
+package DTO;
 
-import javax.persistence.*;
+import model.Movie;
+import model.MovieInProgress;
+
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-public class Movie {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class MovieDTO {
     Long movieId;
     String title;
     int duration;
     String genre;
 
-    @OneToMany(mappedBy = "movie")
-    List<MovieInProgress> Movies = new ArrayList<>();
+    public MovieDTO(Movie movie){
+        this.movieId = movie.getMovieId();
+        this.title = movie.getTitle();
+        this.duration = movie.getDuration();
+        this.genre = movie.getGenre();
+    }
 
-    public Movie(Long movieId, String title, int duration, String genre, List<MovieInProgress> movies) {
+    public MovieDTO(Long movieId,String title, int duration, String genre) {
         this.movieId = movieId;
         this.title = title;
         this.duration = duration;
         this.genre = genre;
-        Movies = movies;
+    }
+
+    public MovieDTO(MovieDTO movie) {
     }
 
     public Long getMovieId() {
@@ -30,9 +36,6 @@ public class Movie {
 
     public void setMovieId(Long movieId) {
         this.movieId = movieId;
-    }
-
-    public Movie() {
     }
 
     public String getTitle() {
@@ -58,21 +61,4 @@ public class Movie {
     public void setGenre(String genre) {
         this.genre = genre;
     }
-
-    public List<MovieInProgress> getMovies() {
-        return Movies;
-    }
-
-    public void setMovies(List<MovieInProgress> movies) {
-        Movies = movies;
-    }
-
-    public Movie( String title, int duration, String genre) {
-
-        this.title = title;
-        this.duration = duration;
-        this.genre = genre;
-
-    }
-
 }

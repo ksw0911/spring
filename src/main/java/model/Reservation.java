@@ -1,12 +1,14 @@
 package model;
 
+import DTO.MovieInProgressDTO;
+
 import javax.persistence.*;
 
 @Entity
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    Long reservationID;
     int place;
     String email;
     int phoneNumber;
@@ -17,14 +19,21 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(int place, String email, int phoneNumber) {
-
+    public Reservation(Long reservationID,int place, String email, int phoneNumber) {
+        this.reservationID = reservationID;
         this.place = place;
         this.email = email;
         this.phoneNumber = phoneNumber;
 
     }
 
+    public Long getReservationID() {
+        return reservationID;
+    }
+
+    public void setReservationID(Long reservationID) {
+        this.reservationID = reservationID;
+    }
 
     public int getPlace() {
         return place;
@@ -57,4 +66,6 @@ public class Reservation {
     public void setMovies(MovieInProgress movies) {
         Movies = movies;
     }
+
+
 }
