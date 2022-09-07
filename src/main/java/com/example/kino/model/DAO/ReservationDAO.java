@@ -1,12 +1,10 @@
-package DAO;
+package com.example.kino.model.DAO;
 
-import DTO.ReservationDTO;
-import model.Movie;
-import model.Reservation;
+import com.example.kino.model.DTO.ReservationDTO;
+import com.example.kino.model.Reservation;
+import com.example.kino.model.repo.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repo.MovieRepository;
-import repo.ReservationRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,7 +12,7 @@ import java.util.stream.Collectors;
 @Service
 public class ReservationDAO {
 ReservationRepository reservationRepository;
-@Autowired
+    @Autowired
     public ReservationDAO(ReservationRepository reservationRepository) {
         this.reservationRepository = reservationRepository;
     }

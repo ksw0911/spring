@@ -1,6 +1,4 @@
-package model;
-
-import DTO.MovieInProgressDTO;
+package com.example.kino.model;
 
 import javax.persistence.*;
 

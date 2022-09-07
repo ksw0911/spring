@@ -1,11 +1,10 @@
-package DAO;
+package com.example.kino.model.DAO;
 
-import DTO.MovieInProgressDTO;
-import model.MovieInProgress;
+import com.example.kino.model.DTO.MovieInProgressDTO;
+import com.example.kino.model.MovieInProgress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repo.MovieInProgressRepository;
-import repo.MovieRepository;
+import com.example.kino.model.repo.MovieInProgressRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;

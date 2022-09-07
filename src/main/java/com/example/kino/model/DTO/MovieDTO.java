@@ -1,11 +1,6 @@
-package DTO;
+package com.example.kino.model.DTO;
 
-import model.Movie;
-import model.MovieInProgress;
-
-import javax.persistence.OneToMany;
-import java.util.ArrayList;
-import java.util.List;
+import com.example.kino.model.Movie;
 
 public class MovieDTO {
     Long movieId;

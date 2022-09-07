@@ -1,4 +1,4 @@
-package model;
+package com.example.kino.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;

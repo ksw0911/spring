@@ -1,6 +1,6 @@
-package DTO;
+package com.example.kino.model.DTO;
 
-import model.MovieInProgress;
+import com.example.kino.model.MovieInProgress;
 
 import java.time.LocalDate;
 

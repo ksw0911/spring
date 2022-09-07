@@ -1,22 +1,20 @@
-package controller;
+package com.example.kino.controller;
 
-import DAO.MovieDAO;
-import DAO.MovieInProgressDAO;
-import DAO.ReservationDAO;
-import DTO.MovieDTO;
-import DTO.MovieInProgressDTO;
-import DTO.ReservationDTO;
-import model.Movie;
-import model.MovieInProgress;
-import model.Reservation;
+import com.example.kino.model.DAO.MovieDAO;
+import com.example.kino.model.DAO.MovieInProgressDAO;
+import com.example.kino.model.DAO.ReservationDAO;
+import com.example.kino.model.DTO.MovieDTO;
+import com.example.kino.model.DTO.MovieInProgressDTO;
+import com.example.kino.model.DTO.ReservationDTO;
+import com.example.kino.model.Movie;
+import com.example.kino.model.MovieInProgress;
+import com.example.kino.model.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import repo.MovieInProgressRepository;
-import repo.ReservationRepository;
 
 import java.time.LocalDate;
 import java.util.List;

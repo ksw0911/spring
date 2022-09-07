@@ -1,9 +1,6 @@
-package DTO;
+package com.example.kino.model.DTO;
 
-import model.MovieInProgress;
-import model.Reservation;
-
-import javax.persistence.ManyToOne;
+import com.example.kino.model.Reservation;
 
 public class ReservationDTO {
     Long reservationID;

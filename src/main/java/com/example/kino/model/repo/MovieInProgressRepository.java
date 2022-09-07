@@ -1,10 +1,8 @@
-package repo;
+package com.example.kino.model.repo;
 
-import DAO.MovieInProgressDAO;
-import DTO.MovieInProgressDTO;
-import model.MovieInProgress;
+
+import com.example.kino.model.MovieInProgress;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
